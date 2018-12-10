@@ -1,0 +1,10 @@
+extends: airbnb-base
+env:
+  browser: true
+  node: true
+rules:
+  semi:
+    - error
+    - never
+  import/no-absolute-path: off
+  import/no-unresolved: off

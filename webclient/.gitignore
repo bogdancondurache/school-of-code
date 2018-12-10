@@ -1,0 +1,10 @@
+# build folder
+dist/
+.cache/
+
+# dependencies
+node_modules/
+
+# editors
+.vscode/
+.idea/

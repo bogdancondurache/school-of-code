@@ -1,0 +1,16 @@
+@import url('../node_modules/@material/typography/mdc-typography.scss');
+
+body {
+    margin: 0;
+}
+
+#app {
+    --mdc-theme-primary: #66d9ef;
+    --mdc-theme-secondary: #f92672;
+    --mdc-theme-background: #FFFFFF;
+}
+
+#page {
+    display: grid;
+    padding-top: 64px;
+}
