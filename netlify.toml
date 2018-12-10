@@ -1,0 +1,4 @@
+[build]
+  base = "webclient/"
+  publish = "webclient/dist/"
+  command = "npm run build"
