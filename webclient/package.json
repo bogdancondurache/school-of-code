@@ -23,7 +23,7 @@
   "dependencies": {
     "@material/button": "^0.39.3",
     "@material/mwc-button": "^0.2.1",
-    "@material/mwc-fab": "^0.3.3",
+    "@material/mwc-fab": "github:bogdancondurache/mwc-fab",
     "@material/mwc-icon": "^0.2.1",
     "@material/theme": "^0.41.0",
     "@material/top-app-bar": "^0.42.0",
