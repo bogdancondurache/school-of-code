@@ -9,7 +9,7 @@ class CodeEditor extends HTMLElement {
   constructor() {
     super()
     this.compile = this.compile.bind(this)
-    this.conn = new WebSocket('ws://35.229.40.47:8080/ws');
+    this.conn = new WebSocket(`ws://${process.env.COMPILER_IP}:8080/ws`);
     this.editor = ace.edit('editor')
     this.editor.setTheme("ace/theme/monokai")
     this.editor.session.setMode("ace/mode/c_cpp")
