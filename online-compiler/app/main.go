@@ -129,7 +129,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	http.HandleFunc("/", serveHome)
 	http.HandleFunc("/ws", serveWs)
 	log.Println("Starting to serve on 8080")
 	log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))

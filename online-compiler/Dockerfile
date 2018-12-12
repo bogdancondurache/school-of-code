@@ -1,5 +1,4 @@
 FROM golang:alpine as source
-RUN apk --update add git
 WORKDIR /home/compiler
 COPY ./app .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -mod vendor
