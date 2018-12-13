@@ -1,8 +1,8 @@
 import './style.scss'
 
-import '/lib/ace/src-min-noconflict/ace.js'
-import '/lib/ace/src-min-noconflict/mode-c_cpp'
-import '/lib/ace/src-min-noconflict/theme-monokai'
+import 'ace-builds/src-min-noconflict/ace.js'
+import 'ace-builds/src-min-noconflict/mode-c_cpp'
+import 'ace-builds/src-min-noconflict/theme-monokai'
 import { html, render } from 'lit-html'
 
 class CodeEditor extends HTMLElement {
