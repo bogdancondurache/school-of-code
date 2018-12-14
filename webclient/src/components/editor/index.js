@@ -9,13 +9,17 @@ class CodeEditor extends HTMLElement {
   constructor() {
     super()
     this.compile = this.compile.bind(this)
-    this.conn = new WebSocket(`wss://compiler.schoolof.codes:8080/ws`);
-    this.editor = ace.edit('editor')
-    this.editor.setTheme("ace/theme/monokai")
-    this.editor.session.setMode("ace/mode/c_cpp")
+    this.conn = new WebSocket(`wss://compiler.schoolof.codes:8080/ws`)
     const compileButton = html`<mwc-fab class="compile-button" icon="send" label="compile"></mwc-fab>`
     render(compileButton, this)
-    this.button = document.getElementsByClassName('compile-button')[0];
+  }
+
+  connectedCallback() {
+    const el = document.getElementById('editor')
+    this.editor = ace.edit(el)
+    this.editor.setTheme("ace/theme/monokai")
+    this.editor.session.setMode("ace/mode/c_cpp")
+    this.button = document.getElementsByClassName('compile-button')[0]
     this.button.addEventListener('click', this.compile)
   }
 

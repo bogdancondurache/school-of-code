@@ -1,3 +1,5 @@
+import './page-element'
+
 class Router {
   constructor(routes) {
     if (!routes) {
@@ -44,7 +46,9 @@ class Router {
       const xhttp = new XMLHttpRequest()
       xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-          document.getElementById('page').innerHTML = this.responseText
+          const template = document.getElementById('page')
+          template.innerHTML = this.responseText
+          document.getElementById('app').appendChild(template.content.cloneNode(true))
         }
       }
       xhttp.open('GET', url, true)
