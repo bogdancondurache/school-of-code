@@ -1,5 +1,3 @@
-import './page-element'
-
 class Router {
   constructor(routes) {
     if (!routes) {
